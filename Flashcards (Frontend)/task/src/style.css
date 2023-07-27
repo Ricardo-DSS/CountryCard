@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+
+#page {
+    width: 98vw;
+    height: 96vh;
+    background: url("Assets/world-map.png") fixed;
+    background-size: cover;
+}
+
+#title {
+    text-align: center;
+    color: #315151;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+#cards {
+    width: 700px;
+    height: 700px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item {
+    color: #ff7c02;
+    border: 2px solid #ff7c02;
+    text-align: center;
+    background-color: #f9efe5;
+    font-weight: bold;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card-item p {
+    font-family: 'Cairo', sans-serif;
+    font-size: x-large;
+    align-self: center;
+    width: 100%;
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.back {
+    height: 100%;
+    width: 100%;
+    color: #f9efe5;
+    border: 2px solid #f9efe5;
+    background-color: #ff7c02;
+    position: absolute;
+    z-index: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card-item:hover {
+    transform: rotateY(180deg);
+}
